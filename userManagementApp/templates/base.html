@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ru">
+<!------------------------------ HEAD ------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--------------- Заголовок --------------->
+    <title>{{title|title}}</title>
+
+    <!----------------- Стили ----------------->
+    {% block styles %}
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <!--<link rel="stylesheet" type="text/css" href="/path/to/css/bootstrap-social.css" />-->
+    {% endblock %}
+
+    <!------------------- JS ------------------>
+    {% block js %}
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/js.js' %}"></script>
+    <script src="{% static 'js/create_user.js' %}"></script>
+
+    {% endblock %}
+</head>
+<!---------------------------- END HEAD ---------------------------->
+<!------------------------------ BODY ------------------------------>
+<body>
+        <!---------------------- Меню ---------------------->
+              {% block menu %}
+        {% include 'inc/top_menu.html' %}
+            {% if page != 'index' %}
+            {% include 'inc/inc-menu.html' %}
+            {% endif %}
+
+            {% endblock %}
+        <!-------------------- Контент --------------------->
+        <!------------------ id='content' ------------------>
+            {% block content %}
+            {% endblock %}
+        <!------------ end id='content' ------------>
+
+        <!----------------- Footer ----------------->
+            {% block footer %}
+         {% include 'inc-footer.html' %}
+            {% endblock %}
+</body>
+</html>
+        <!---------------------------- END BODY ---------------------------->

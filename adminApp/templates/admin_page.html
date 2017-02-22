@@ -1,0 +1,14 @@
+{% extends "base_admin.html" %}
+{% block content %}
+<table id="users">
+    <caption> Пользователи:</caption>
+        <ul id="users_list">
+            {% include 'inc-users_list.html' %}
+        </ul>
+
+</table>
+<form id="user_form">
+    {% include 'inc-edit_form.html' %}
+</form>
+<input type="submit" value="Сохранить" onclick="send_data()">
+{% endblock %}

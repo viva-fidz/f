@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ru">
+<!------------------------------ HEAD ------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <!--------------- Заголовок --------------->
+    <title>{{title|title}}</title>
+
+    <!----------------- Стили ----------------->
+    {% block styles %}
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Schoolbell" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">-->
+    {% endblock %}
+
+    <!------------------- JS ------------------>
+    {% block js %}
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{% static 'js/create_user.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/js.js' %}"></script>
+    {% endblock %}
+</head>
+<!---------------------------- END HEAD ---------------------------->
+
+<!------------------------------ BODY ------------------------------>
+<body>
+
+        <!---------------------- Меню ---------------------->
+             <!---------------------- Меню ---------------------->
+            {% block menu %}
+
+
+            {% include 'inc/top_menu.html' %}
+            {% if page != 'index' %}
+            {% include 'inc/inc-menu.html' %}
+            {% endif %}
+
+            {% endblock %}
+
+        <!-------------------- Контент --------------------->
+        <!------------------ id='content' ------------------>
+        <div class="container">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+        <!------------ end id='content' ------------>
+
+        <!----------------- Footer ----------------->
+            {% block footer %}
+         {% include 'inc/inc-footer.html' %}
+            {% endblock %}
+</body>
+</html>
+        <!---------------------------- END BODY ---------------------------->

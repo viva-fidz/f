@@ -1,0 +1,26 @@
+<div class="btn-group-xs text-center">
+    <div class="user_menu">
+
+            {% if user.is_authenticated %}
+         <li><a href="/user/logout/">Выйти</a></li>
+
+        <li><a href="#">{{ user.username }}</a></li>
+             {% endif %}
+          <li><a href="/contact/">Контакты</a></li>
+
+
+        <ul id="service_user_menu">
+            <li><a href="/haircut/">Стрижка</a></li>
+            <li><a href="/locks/">Плетение</a></li>
+            <li><a href="/color/">Окрашивание</a></li>
+            <li><a href="/hairdress/">Прическа</a></li>
+        </ul>
+
+        <li><a href="/services/">Услуги</a></li>
+
+     <li><a href="/">Главная</a></li>
+
+
+    </div>
+</div>
+

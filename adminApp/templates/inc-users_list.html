@@ -1,0 +1,10 @@
+{% load staticfiles %}
+{% for user in users %}
+    <tr>
+        <td> {{ user }}</td>
+        <td><a href="delete/user/{{ user.id }}" class="btn  btn-danger btn-xs">Х</a></td>
+        <td>
+            <button type="button" class="btn btn-xs" onclick="fill_form({{ user.id }})">Редактировать</button>
+        </td>
+    </tr>
+{% endfor %}

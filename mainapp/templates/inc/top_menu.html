@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<div class="top_navbar button" onclick="(function(){$('.menu_top').toggleClass('hide', 'show'); })()">
+    <img alt="Brand" src="{% static '/img/11.jpg/' %}">
+    <div class="menu_top hide">
+        <a href="/">Главная</a>
+        <div class="btn-group-vertical ">
+            <div class="btn-group-xs">
+                <a href="/services/">Услуги</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/haircat/">Стрижка</a></li>
+                    <li><a href="/locks/">Плетение</a></li>
+                    <li><a href="/color/">Окрашивание</a></li>
+                    <li><a href="/hairdress/">Прическа</a></li>
+                </ul>
+                    <a href="/contact/">Контакты</a>
+            </div>
+        </div>
+    </div>
+</div>

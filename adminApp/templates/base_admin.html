@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ru"  class="admin">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title|title}}</title>
+<!------------------ styles ------------------>
+     {% block styles %}
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% endblock %}
+
+    {% block js %}
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/js.js' %}"></script>
+    <script src="{% static 'js/create_user.js' %}"></script>
+    {% endblock %}
+
+
+</head>
+<body>
+<div id="csrfmiddlewaretoken" style="display: none;">{% csrf_token %}</div>
+<section class="section" id="content">
+     <div class="container">
+       	 <div class="row">
+            <h2 class="subtitle text-center">Админка</h2>
+
+             <!------------ style content ---------->
+             <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+                 <section class="section" id="content1">
+
+                            {% block content %}
+                            {% endblock %}
+
+                 </section>
+             </div> <!-- /col -->
+              <!------------ end style content ---------->
+         </div><!-- /row -->
+     </div>
+</section>
+    {% block footer %}
+{% include 'inc-footer.html' %}
+      {% endblock %}
+
+</body>
+</html>

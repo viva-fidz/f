@@ -1,0 +1,251 @@
+html {
+	background: url(../img/2.jpg) no-repeat center center fixed;
+	min-height: 100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+body {
+	background: transparent;
+	min-height: 100%;
+	background-opacity: 1;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	line-height: 1.5em;
+	font-size: 14px;
+	font-family: 'Philosopher', sans-serif;
+	color: black;
+	font-weight: 780;
+}
+.top_navbar {
+    background-color: black;
+    margin-bottom: 50px;
+}
+.menu_top {
+    float: left;
+}
+.menu_top a, .admin_menu a, .user_menu a {
+    display: inline-block;
+    color: #efdecd;
+    margin: 20px;
+	font-size: 13px;
+    font-weight: 600;
+}
+.admin_menu li  {
+    background-color: black;
+    float: left;
+    margin: 0 auto;
+}
+.user_menu li {
+    float: right;
+    margin: 0 auto;
+    background-color: black;
+}
+
+/* Sections - universal classes */
+.section {
+	z-index: 1;
+	min-height: 420px;
+	overflow: auto;
+	height: 100%;
+	padding-top: 150px;
+	padding-bottom: 50px;
+	display: none;
+	top: 0;
+	width: 100%;
+}
+.section .row {
+	background-color: black;
+	opacity: .8;
+	width: 100%;
+	color: white;
+	margin: 0;
+}
+form {
+    font-weight: 550;
+    margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+	.section { padding-top: 80px;}
+}
+/* Show the sections */
+#head, #contact, #services, #nav, #content, #content1, #table {
+	display: block;
+}
+.enter_to_site {
+    text-align: right;
+}
+input {
+    color: black;
+}
+input[type="submit"] {
+    padding-top: 1px;
+    padding-bottom: 2px;
+    margin-top: 4px;
+    margin-bottom: 60px;
+}
+button, .text-danger {
+    margin-right:10px;
+}
+/* Typography */
+.title,
+.subtitle {
+	background-color: black;
+	opacity: .8;
+	font-family: 'Philosopher', sans-serif;
+	font-weight: normal;
+	font-size: 7em;
+	margin-bottom: 15px;
+	color: white;
+	line-height: 1em;
+}
+.subtitle {
+	line-height: .9em;
+	font-size: 5.5em;
+	margin-bottom: 100px;
+}
+.tagline {
+	font-size: 1.4em;
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 75px;
+
+}
+#users {
+    float: left;
+    font-weight: 600;
+	font-size: 20px;
+	margin: 15px;
+	color: white;
+	line-height: 2;
+	list-style: none;
+	margin-top: -50px;
+	margin-right: 140px;
+}
+#users a {
+    margin-left: 3px;
+}
+#table {
+    font-weight: 600;
+	font-size: 20px;
+	color: white;
+	line-height: 2;
+	margin-right: auto;
+}
+#table tbody {
+    font-weight: 400;
+}
+#table thead {
+    background-opacity: 0.7;
+}
+#table td, #table th {
+    padding: 15px;
+}
+.login {
+    font-weight: 800;
+	font-size: 14px;
+	margin: 15px;
+	color: black;
+    text-align: right;
+}
+.menu {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-align:left;
+    color: #000;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom:20px;
+}
+.category {
+    font-weight: 400;
+	font-size: 20px;
+	margin: 15px;
+    display: inline-block;
+    float: left;
+}
+@media (max-width: 767px) {
+	.lead {
+		font-size: 1.3em;
+	}
+}
+.footer {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    color: grey;
+}
+.table {
+    margin-bottom: 20px;
+}
+.mainmenu, .admin_menu li, .user_menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#contact a {
+    font-size: 2.7em;
+}
+#contact span {
+    display: inline-block;
+    float: left;
+    margin-right: 50px;
+}
+#contact .row {
+    padding-bottom: 100px;
+}
+.social {
+    margin-top: 90px;
+}
+.mainmenu li {
+    display: inline-block;
+}
+.mainmenu > li {
+    position: absolute;
+    z-index: 10;
+    width: 400px;
+    display: none;
+}
+.mainmenu > li {
+    position: relative;
+    z-index: 9;
+    display: block;
+}
+.mainmenu a:hover{
+    display: block;
+}
+/*
+.admin_menu #service_admin_menu{
+    display: none;
+}
+.admin_menu > li:hover #service_admin_menu {
+    display: inline-block;
+}*/
+.category a img {
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.category a {
+    text-decoration: none;
+    margin-left: 0px;
+    color: #808080;
+}
+.auth_admin_menu {
+    text-align: right;
+    float: right;
+}
+.admin_menu, .user_menu {
+    background-color: black;
+}
+#service_admin_menu li a, #service_user_menu li a{
+    color: grey;
+}
+#services {
+    margin: 0 auto;
+    padding-bottom: 30px;
+}

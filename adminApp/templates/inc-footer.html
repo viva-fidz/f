@@ -1,0 +1,9 @@
+    <!----------------------- FOOTER ----------------------->
+    <div class="footer">
+        {% block footer %}
+        <strong>
+            {% now "Y" as current_year %}
+            Copyright  &copy; vivafidz {{ current_year }}
+        </strong>
+        {% endblock %}
+    </div>
