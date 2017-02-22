@@ -46,37 +46,25 @@ function getFormData(form) {
     return indexed_array;
 }
 
+
 function send_data() {
     var id = $('#user_id').html();
-    console.log('user_id = ', id);
-    var prefix =  (id != undefined) ? id : '';
+    var prefix = (id !== undefined) ? id : '';
     var user_data = getFormData($form);
-    console.log('user_data = ', user_data);
     $.ajax({
         url: 'create/user/' + prefix,
         type: 'POST',
         data: user_data,
         dataType: 'json',
         success: function (response) {
-            console.log("response = ", response);
-            if (response.errors) {
-                var errors = JSON.parse(response.errors);
-                //console.log("errors = ", errors);
-                clear_errors();
-                show_errors(errors);
-            } else {
-                clear_form();
-                $('#users_list').modal('hide');
-                update_page(response.html);
-                console.log("Object create");
-                clear_form()
-            }
+            clear_form();
+            $('#users').html(response.html)
         },
-        error: function (xhr, status, error) {
-            console.log('error =', error)
-        }
     });
 }
+
+
+
 
 function fill_form(id){
     $.ajax({
@@ -87,7 +75,7 @@ function fill_form(id){
             if (response.errors) {
                 console.log("errors = ", errors);
             } else {
-                $('#inc-users_list').html(response.html);
+                $('#user_form').html(response.html);
             }
         },
         error: function (xhr, status, error) {
@@ -96,24 +84,3 @@ function fill_form(id){
     });
 }
 
-// DEMO-function TEMPLATE
-function demo_send_data(id){
-    $.ajax({
-        url: '<адрес ajax-запроса>',
-        type: 'GET/POST',
-        dataType: 'json',
-        // Функция, которая будет выполнена при успешном ответе
-        success: function (response) {
-            console.log("response = ", response);
-        },
-        // Функция, которая будет выполнена, при ошибке на сервере
-        error: function (xhr, status, error) {
-            console.log('error =', error)
-        }
-    });
-}
-
-// function recover_base_form(){
-//     $('#user_modal').html(base_modal_html);
-//     $form = $('#user_form');
-// }
