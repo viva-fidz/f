@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block js %}
+{{ block.super }}
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="{% static 'engine1/style.css' %}" />
+	<script type="text/javascript" src="{% static 'engine1/jquery.js' %}"></script>
+    <!-- End WOWSlider.com HEAD section -->
+{% endblock %}
+
+{% block content %}
+<section class="section" id="services">
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+	    <h3 class="text-center title">Услуги</h3>
+    </div>
+	<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+	<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+        <li><a href="/haircut/"><img src="{% static 'data1/images/cut.jpg' %}" alt="cut" title="стрижка" id="wows1_0"/></a></li>
+        <li><a href="/hairdress/"><img src="{% static 'data1/images/hairdress.jpg' %}" alt="hairdress" title="прическа" id="wows1_1"/></a></li>
+		<li><a href="/locks/"><img src="{% static 'data1/images/lock.jpg' %}" alt="slider" title="плетение" id="wows1_2"/></a></li>
+        <li><a href="/color/"><img src="{% static 'data1/images/color.jpg' %}" alt="color" title="окрашивание" id="wows1_3"/></a></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="cut"><span><img src="{% static 'data1/tooltips/cut.jpg' %}" alt="cut"/>1</span></a>
+		<a href="#" title="hairdress"><span><img src="{% static 'data1/tooltips/hairdress.jpg' %}" alt="hairdress"/>2</span></a>
+		<a href="#" title="lock"><span><img src="{% static 'data1/tooltips/lock.jpg' %}" alt="lock"/>3</span></a>
+		<a href="#" title="color"><span><img src="{% static 'data1/tooltips/color.jpg' %}" alt="color"/>4</span></a>
+	</div></div>
+	<div class="ws_shadow"></div>
+	</div>
+	<script type="text/javascript" src="{% static 'engine1/wowslider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'engine1/script.js' %}"></script>
+	<!-- End WOWSlider.com BODY section -->
+</div>
+</section>
+{% endblock %}
