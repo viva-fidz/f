@@ -40,3 +40,9 @@ def haircut(request):
     title = 'Стрижка'
     haircut = Haircut.objects.all()
     return render(request, 'haircut.html', {'haircut': haircut, 'title': title})
+
+
+def s_wow(request):
+    title = 'Услуги'
+    cat = Category.objects.all()
+    return render(request, 'wow_slider/service_wow.html', {'page': 's_wow', 'title': title, 'category': cat})
