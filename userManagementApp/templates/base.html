@@ -11,8 +11,8 @@
 
     <!----------------- Стили ----------------->
     {% block styles %}
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <!--<link rel="stylesheet" type="text/css" href="/path/to/css/bootstrap-social.css" />-->
     {% endblock %}
@@ -32,9 +32,7 @@
         <!---------------------- Меню ---------------------->
               {% block menu %}
         {% include 'inc/top_menu.html' %}
-            {% if page != 'index' %}
-            {% include 'inc/inc-menu.html' %}
-            {% endif %}
+
 
             {% endblock %}
         <!-------------------- Контент --------------------->

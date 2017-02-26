@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^hairdress/$', hairdress, name='hairdress'),
     url(r'^contact/$', contact, name='contact'),
     url(r'^services/$', services, name='services'),
-    url(r'^service_wow/$', s_wow, name='s_wow'),
+    url(r'^service/$', s_wow, name='s_wow'),
 
     url(r'^user/', include('userManagementApp.urls')),
     url(r'^admin/', include('adminApp.urls')),
