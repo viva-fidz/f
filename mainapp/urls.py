@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^contact/$', contact, name='contact'),
     url(r'^services/$', services, name='services'),
     url(r'^service/$', s_wow, name='s_wow'),
+    url(r'^contacts/$', contacts, name='contacts'),
 
     url(r'^user/', include('userManagementApp.urls')),
     url(r'^admin/', include('adminApp.urls')),
