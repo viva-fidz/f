@@ -15,12 +15,6 @@ def contact(request):
     return render(request, 'contact.html', {'page': 'contact', 'title': title})
 
 
-def services(request):
-    title = 'Услуги'
-    cat = Category.objects.all()
-    return render(request, 'services.html', {'page': 'services', 'title': title, 'category': cat})
-
-
 def locks(request):
     title = 'Плетение'
     locks = Locks.objects.all()
@@ -56,21 +50,21 @@ def contacts(request):
             message = form.cleaned_data['message']
             copy = form.cleaned_data['copy']
 
-            recipient_list = ['viva.fidz@yandex.ru']
+            recipients = ['viva.fidz@yandex.ru']
             # Если пользователь захотел получить копию себе, добавляем его в список получателей
             if copy:
-                recipient_list.append(sender)
+                recipients.append(sender)
             try:
-                send_mail(subject, message, 'viva.fidz@yandex.ru',  recipient_list)
+                send_mail(subject, message, 'viva.fidz@yandex.ru', recipients)
             except BadHeaderError:  # Защита от уязвимости
                 return HttpResponse('Invalid header found')
                 # Переходим на другую страницу, если сообщение отправлено
-            return render(request, 'contacts/thanks.html')
+            return render(request, 'email/thanks.html')
     else:
         # Заполняем форму
         form = ContactForm()
         # Отправляем форму на страницу
-    return render(request, 'contacts.html', {'title': title, 'form': form})
+    return render(request, 'email/contacts.html', {'title': title, 'form': form})
 
 
 def s_wow(request):

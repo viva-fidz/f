@@ -21,8 +21,14 @@
 
 </head>
 <body>
+
+        {% block menu %}
+        {% include 'inc/top_menu.html' %}
+        {% endblock %}
+
 <div id="csrfmiddlewaretoken" style="display: none;">{% csrf_token %}</div>
 <section class="section" id="content">
+
      <div class="container">
        	 <div class="row">
             <h2 class="subtitle text-center">Админка</h2>

@@ -27,7 +27,6 @@ urlpatterns = [
     url(r'^color/$', color, name='color'),
     url(r'^hairdress/$', hairdress, name='hairdress'),
     url(r'^contact/$', contact, name='contact'),
-    url(r'^services/$', services, name='services'),
     url(r'^service/$', s_wow, name='s_wow'),
     url(r'^contacts/$', contacts, name='contacts'),
 

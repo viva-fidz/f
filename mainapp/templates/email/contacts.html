@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<section class="section" id="contact">
+
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="row">
+            <div class="social col-sm-12">
+                <div class="subtitle text-center">Напишите нам!</div>
+                <form action="/contacts/" method="post">{% csrf_token %}
+    {% for field in form %}
+        <tr>
+            <td>{{ field.label_tag }}</td>
+            <td><div>
+                <ul>
+                    {% for error in field.errors %}
+                    <div class="text-danger">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {{ field }}
+                </ul>
+             </div></td>
+        </tr>
+    {% endfor %}
+    	<input type="submit" value="Отправить"/>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
