@@ -59,7 +59,7 @@ def contacts(request):
             except BadHeaderError:  # Защита от уязвимости
                 return HttpResponse('Invalid header found')
                 # Переходим на другую страницу, если сообщение отправлено
-            return render(request, 'email/thanks.html')
+            return render(request, 'email/thanks.html', {'title': 'Спасибо'})
     else:
         # Заполняем форму
         form = ContactForm()
