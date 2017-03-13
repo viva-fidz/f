@@ -26,12 +26,18 @@ body {
 .menu_top {
     float: left;
 }
-.menu_top a, .admin_menu a, .user_menu a {
+.menu_top a, .admin_menu a, .user_menu a, #contact_form {
     display: inline-block;
     color: #efdecd;
     margin: 20px;
 	font-size: 13px;
     font-weight: 600;
+}
+#contact_form {
+    opacity: .8;
+    float: right;
+    color: white;
+
 }
 .admin_menu li  {
     background-color: black;
