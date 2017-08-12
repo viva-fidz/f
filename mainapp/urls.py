@@ -18,9 +18,14 @@ from django.conf.urls import url, include
 from mainapp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
+
 
 
 urlpatterns = [
+    url(r'^admin/',include(admin.site.urls)),
+    # url(r'^admin/', include('adminApp.urls')),
+
     url(r'^$', index, name='index'),
     url(r'^locks/$', locks, name='locks'),
     url(r'^haircut/$', haircut, name='haircut'),
@@ -31,7 +36,7 @@ urlpatterns = [
     url(r'^contacts/$', contacts, name='contacts'),
 
     url(r'^user/', include('userManagementApp.urls')),
-    url(r'^admin/', include('adminApp.urls')),
+    # url(r'^admin/', include('adminApp.urls')),
 ]
 
 if settings.DEBUG:
