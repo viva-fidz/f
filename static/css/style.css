@@ -182,6 +182,17 @@ button, .text-danger {
 		font-size: 1.3em;
 	}
 }
+@media (max-width: 375px) {
+	.menu_top a, #contact_form {
+		color: black;
+	}
+}
+@media (max-width: 529px) {
+	#contact_form {
+		color: black;
+	}
+}
+
 @media (max-width: 400px) {
     .title, .subtitle {
         font-size: 3em;
@@ -223,6 +234,9 @@ button, .text-danger {
 }
 .social {
     margin-top: 90px;
+}
+.container_social {
+    display: inline-block;
 }
 .mainmenu li {
     display: inline-block;
